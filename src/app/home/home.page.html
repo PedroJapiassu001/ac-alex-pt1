@@ -1,20 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Gerenciador Pet</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="ion-padding ion-text-center">
+    <h2>Bem-vindo!</h2>
+    <p>Escolha o que você deseja gerenciar:</p>
+  </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="ion-padding">
+    <ion-button expand="block" routerLink="/pets" class="ion-margin-bottom">
+      Gerenciar Pets
+    </ion-button>
+    
+    <ion-button expand="block" routerLink="/cuidadores" color="secondary">
+      Gerenciar Cuidadores
+    </ion-button>
   </div>
 </ion-content>

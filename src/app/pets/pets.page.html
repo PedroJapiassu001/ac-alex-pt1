@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Gerenciador de Pets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ isEditing ? 'Editar Pet' : 'Adicionar Novo Pet' }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form (ngSubmit)="adicionarOuAtualizarPet()">
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" [(ngModel)]="novoPet.nome" name="nome" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Espécie</ion-label>
+          <ion-input type="text" [(ngModel)]="novoPet.especie" name="especie" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Raça</ion-label>
+          <ion-input type="text" [(ngModel)]="novoPet.raca" name="raca"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Idade</ion-label>
+          <ion-input type="number" [(ngModel)]="novoPet.idade" name="idade"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Observações</ion-label>
+          <ion-textarea [(ngModel)]="novoPet.observacoes" name="observacoes"></ion-textarea>
+        </ion-item>
+
+        <ion-button expand="block" type="submit" class="ion-margin-top">
+          {{ isEditing ? 'Salvar Alterações' : 'Adicionar Pet' }}
+        </ion-button>
+        <ion-button *ngIf="isEditing" expand="block" fill="outline" color="danger" (click)="limparFormulario()">
+          Cancelar
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+<ion-card class="ion-margin-top">
+    <ion-card-header>
+      <ion-card-title>Lista de Pets Cadastrados</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngIf="pets.length > 0; else noPets">
+        <ion-item *ngFor="let pet of pets" lines="full">
+          <ion-label>
+            <h2>Nome: {{ pet.nome }}</h2>
+            <p>Espécie: {{ pet.especie }}</p>
+            <p>Raça: {{ pet.raca }}</p>
+            <p>Idade: {{ pet.idade }}</p>
+            <p>Observações: {{ pet.observacoes }}</p>
+          </ion-label>
+
+          <ion-buttons slot="end">
+            <ion-button color="primary" (click)="editarPet(pet)">
+              <ion-icon slot="icon-only" name="create"></ion-icon>
+            </ion-button>
+            <ion-button color="danger" (click)="deletarPet(pet.id!)">
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-list>
+
+      <ng-template #noPets>
+        <p class="ion-text-center">Nenhum pet cadastrado ainda.</p>
+      </ng-template>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
