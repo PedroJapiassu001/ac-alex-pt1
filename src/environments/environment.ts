@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyChEE7qfjBXl9PCKIiquHcsu3PFdl4hb0g",
-    authDomain: "acalex.firebaseapp.com",
-    projectId: "acalex",
-    storageBucket: "acalex.firebasestorage.app",
-    messagingSenderId: "1089081328267",
-    appId: "1:1089081328267:web:7633c464cdd5c5a5410a8e",
-    measurementId: "G-VTRGBYH36F"
+  apiKey: "AIzaSyCltCm_A_hvFS_NK4L3ooICU9gwWIoZFtE",
+  authDomain: "acalex02-a4e2c.firebaseapp.com",
+  projectId: "acalex02-a4e2c",
+  storageBucket: "acalex02-a4e2c.firebasestorage.app",
+  messagingSenderId: "974428074077",
+  appId: "1:974428074077:web:d6a00f1ff6633b0a37ddb4",
+  measurementId: "G-QD7VFETGEX"
   }
 };
 

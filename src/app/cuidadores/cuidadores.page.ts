@@ -20,10 +20,10 @@ export class CuidadoresPage implements OnInit {
   cuidadores: Cuidador[] = [];
 
   novoCuidador: Cuidador = {
-    nome: '',
-    telefone: '',
-    experiencia: 0,
-    especialidades: ''
+    nomeCuidador: '',
+    cell: '',
+    tempoExperiencia: 0,
+    conhecimentos: ''
   };
 
   isEditing: boolean = false;
@@ -63,10 +63,10 @@ export class CuidadoresPage implements OnInit {
 
   limparFormulario() {
     this.novoCuidador = {
-      nome: '',
-      telefone: '',
-      experiencia: 0,
-      especialidades: ''
+      nomeCuidador: '',
+      cell: '',
+      tempoExperiencia: 0,
+      conhecimentos: ''
     };
     this.isEditing = false;
   }

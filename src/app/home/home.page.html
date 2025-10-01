@@ -1,21 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Gerenciador Pet</ion-title>
+    <ion-title>Gerenciador Pet</ion-title> 
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="ion-padding ion-text-center">
-    <h2>Bem-vindo!</h2>
-    <p>Escolha o que você deseja gerenciar:</p>
-  </div>
 
   <div class="ion-padding">
-    <ion-button expand="block" routerLink="/pets" class="ion-margin-bottom">
+    <ion-button expand="block" routerLink="/pets" class="ion-margin-bottom" color="tertiary">
       Gerenciar Pets
     </ion-button>
     
-    <ion-button expand="block" routerLink="/cuidadores" color="secondary">
+    <ion-button expand="block" routerLink="/cuidadores" color="success">
       Gerenciar Cuidadores
     </ion-button>
   </div>

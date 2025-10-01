@@ -13,20 +13,20 @@
     <ion-card-content>
       <form (ngSubmit)="adicionarOuAtualizarCuidador()">
         <ion-item>
-          <ion-label position="floating">Nome</ion-label>
-          <ion-input type="text" [(ngModel)]="novoCuidador.nome" name="nome" required></ion-input>
+          <ion-label position="floating">Nome do Cuidador</ion-label>
+          <ion-input type="text" [(ngModel)]="novoCuidador.nomeCuidador" name="nomeCuidador" required></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Telefone</ion-label>
-          <ion-input type="text" [(ngModel)]="novoCuidador.telefone" name="telefone" required></ion-input>
+          <ion-label position="floating">N° de Celular</ion-label>
+          <ion-input type="text" [(ngModel)]="novoCuidador.cell" name="cell" required></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Experiência (anos)</ion-label>
-          <ion-input type="number" [(ngModel)]="novoCuidador.experiencia" name="experiencia"></ion-input>
+          <ion-label position="floating">Tempo de Experiência</ion-label>
+          <ion-input type="number" [(ngModel)]="novoCuidador.tempoExperiencia" name="tempoExperiencia"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Especialidades</ion-label>
-          <ion-input type="text" [(ngModel)]="novoCuidador.especialidades" name="especialidades"></ion-input>
+          <ion-label position="floating">Conhecimentos</ion-label>
+          <ion-input type="text" [(ngModel)]="novoCuidador.conhecimentos" name="conhecimentos"></ion-input>
         </ion-item>
 
         <ion-button expand="block" type="submit" class="ion-margin-top">
@@ -47,18 +47,18 @@
       <ion-list *ngIf="cuidadores.length > 0; else noCuidadores">
         <ion-item *ngFor="let cuidador of cuidadores" lines="full">
           <ion-label>
-            <h2>Nome: {{ cuidador.nome }}</h2>
-            <p>Telefone: {{ cuidador.telefone }}</p>
-            <p>Experiência: {{ cuidador.experiencia }} anos</p>
-            <p>Especialidades: {{ cuidador.especialidades }}</p>
+            <h2>Nome do Cuidador: {{ cuidador.nomeCuidador }}</h2>
+            <p>N° Celular: {{ cuidador.cell }}</p>
+            <p>Tempo de Experiência: {{ cuidador.tempoExperiencia }} anos</p>
+            <p>Conhecimentos: {{ cuidador.conhecimentos }}</p>
           </ion-label>
 
           <ion-buttons slot="end">
             <ion-button color="primary" (click)="editarCuidador(cuidador)">
-              <ion-icon slot="icon-only" name="create"></ion-icon>
+              <ion-icon slot="icon-only" name="pencil"></ion-icon>
             </ion-button>
             <ion-button color="danger" (click)="deletarCuidador(cuidador.id!)">
-              <ion-icon slot="icon-only" name="trash"></ion-icon>
+              <ion-icon slot="icon-only" name="trash-bin"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-item>

@@ -4,10 +4,10 @@ import { Observable } from 'rxjs';
 
 export interface Cuidador {
   id?: string;
-  nome: string;
-  telefone: string;
-  experiencia: number | null;
-  especialidades: string;
+  nomeCuidador: string;
+  cell: string;
+  tempoExperiencia: number | null;
+  conhecimentos: string;
 }
 
 @Injectable({

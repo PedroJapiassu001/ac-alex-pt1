@@ -5,10 +5,10 @@ import { Observable } from 'rxjs';
 export interface Pet {
   id?: string;
   nome: string;
-  especie: string;
+  categoria: string;
   raca: string;
-  idade: number | null;
-  observacoes: string;
+  idadePet: number | null;
+  descricao: string;
 }
 
 @Injectable({

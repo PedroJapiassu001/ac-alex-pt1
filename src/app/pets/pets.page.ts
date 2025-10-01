@@ -21,10 +21,10 @@ export class PetsPage implements OnInit {
 
   novoPet: Pet = {
     nome: '',
-    especie: '',
+    categoria: '',
     raca: '',
-    idade: 0,
-    observacoes: ''
+    idadePet: 0,
+    descricao: ''
   };
 
   isEditing: boolean = false;
@@ -65,10 +65,10 @@ export class PetsPage implements OnInit {
   limparFormulario() {
     this.novoPet = {
       nome: '',
-      especie: '',
+      categoria: '',
       raca: '',
-      idade: 0,
-      observacoes: ''
+      idadePet: 0,
+      descricao: ''
     };
     this.isEditing = false;
   }
